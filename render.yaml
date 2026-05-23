@@ -1,0 +1,24 @@
+# Render Blueprint — PruneKit GitHub App (free tier)
+# Deploy: https://dashboard.render.com/select-repo?type=web
+# Or connect repo nico-builds/prunekit-app in Render dashboard.
+
+services:
+  - type: web
+    name: prunekit
+    runtime: docker
+    plan: free
+    region: virginia
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ACTION_REPO
+        value: nico-builds/prunekit-cleanup-action
+      - key: GITHUB_APP_ID
+        sync: false
+      - key: GITHUB_WEBHOOK_SECRET
+        sync: false
+      - key: GITHUB_APP_PRIVATE_KEY
+        sync: false
+    # After deploy, set APP_BASE_URL to your Render URL in GitHub App settings.

@@ -2,7 +2,9 @@
 
 **Prune dead code. Merge redundant docs. Keep repos lean.**
 
-PruneKit is a GitHub product for AI-powered repository cleanup, built on the [Cursor SDK](https://cursor.com/docs/sdk) (Composer 2.5).
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nico-builds/prunekit-app)
+
+GitHub App for AI-powered repository cleanup, built on the [Cursor SDK](https://cursor.com/docs/sdk) (Composer 2.5).
 
 | Component | Repository | Role |
 |-----------|------------|------|

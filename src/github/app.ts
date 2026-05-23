@@ -1,21 +1,32 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { App } from "@octokit/app";
 import type { Octokit } from "@octokit/rest";
 
 let appInstance: App | null = null;
 
+function loadPrivateKey(): string {
+  const inline = process.env.GITHUB_APP_PRIVATE_KEY?.trim();
+  if (inline) {
+    return inline.replace(/\\n/g, "\n");
+  }
+  const privateKeyPath = process.env.GITHUB_APP_PRIVATE_KEY_PATH;
+  if (privateKeyPath && existsSync(privateKeyPath)) {
+    return readFileSync(privateKeyPath, "utf8");
+  }
+  throw new Error(
+    "Set GITHUB_APP_PRIVATE_KEY or GITHUB_APP_PRIVATE_KEY_PATH to a readable PEM file"
+  );
+}
+
 export function loadConfig() {
   const appId = process.env.GITHUB_APP_ID;
-  const privateKeyPath = process.env.GITHUB_APP_PRIVATE_KEY_PATH;
   const webhookSecret = process.env.GITHUB_WEBHOOK_SECRET;
 
-  if (!appId || !privateKeyPath || !webhookSecret) {
-    throw new Error(
-      "Missing GITHUB_APP_ID, GITHUB_APP_PRIVATE_KEY_PATH, or GITHUB_WEBHOOK_SECRET"
-    );
+  if (!appId || !webhookSecret) {
+    throw new Error("Missing GITHUB_APP_ID or GITHUB_WEBHOOK_SECRET");
   }
 
-  const privateKey = readFileSync(privateKeyPath, "utf8");
+  const privateKey = loadPrivateKey();
   return {
     appId: Number(appId),
     privateKey,
