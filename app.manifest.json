@@ -3,10 +3,10 @@
   "description": "Prune dead code and merge redundant docs in your GitHub repositories.",
   "url": "https://github.com/nico-builds/prunekit-app",
   "hook_attributes": {
-    "url": "https://YOUR_DEPLOYED_HOST/webhooks/github"
+    "url": "https://nico-builds-prunekit.fly.dev/webhooks/github"
   },
-  "redirect_url": "https://YOUR_DEPLOYED_HOST/setup/complete",
-  "setup_url": "https://YOUR_DEPLOYED_HOST/setup",
+  "redirect_url": "https://nico-builds-prunekit.fly.dev/setup/complete",
+  "setup_url": "https://nico-builds-prunekit.fly.dev/setup",
   "public": true,
   "default_permissions": {
     "metadata": "read",

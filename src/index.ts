@@ -20,7 +20,7 @@ app.get("/setup/complete", (_req, res) => {
 <html><body style="font-family:system-ui;max-width:640px;margin:40px auto;padding:0 16px">
   <h1>PruneKit installed</h1>
   <p>Add <code>CURSOR_API_KEY</code> to your repository secrets, then add the PruneKit workflow.</p>
-  <p><a href="https://github.com/chiku524/prunekit-cleanup-action">Workflow documentation</a></p>
+  <p><a href="https://github.com/nico-builds/prunekit-cleanup-action">Workflow documentation</a></p>
 </body></html>`);
 });
 

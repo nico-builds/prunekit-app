@@ -1,0 +1,27 @@
+# fly.toml — PruneKit GitHub App
+# Deploy: fly auth login && fly deploy
+# App URL becomes https://nico-builds-prunekit.fly.dev
+
+app = 'nico-builds-prunekit'
+primary_region = 'iad'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  PORT = '3000'
+  ACTION_REPO = 'nico-builds/prunekit-cleanup-action'
+  NODE_ENV = 'production'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '256mb'
+  cpu_kind = 'shared'
+  cpus = 1

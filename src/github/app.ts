@@ -20,7 +20,7 @@ export function loadConfig() {
     appId: Number(appId),
     privateKey,
     webhookSecret,
-    actionRepo: process.env.ACTION_REPO ?? "chiku524/prunekit-cleanup-action",
+    actionRepo: process.env.ACTION_REPO ?? "nico-builds/prunekit-cleanup-action",
     supportEmail: process.env.SUPPORT_EMAIL ?? "support@example.com",
     appBaseUrl: process.env.APP_BASE_URL ?? "http://localhost:3000",
   };

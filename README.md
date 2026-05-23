@@ -6,7 +6,7 @@ PruneKit is a GitHub product for AI-powered repository cleanup, built on the [Cu
 
 | Component | Repository | Role |
 |-----------|------------|------|
-| **GitHub Action** | [prunekit-cleanup-action](https://github.com/chiku524/prunekit-cleanup-action) | CI audits & optional apply |
+| **GitHub Action** | [prunekit-cleanup-action](https://github.com/nico-builds/prunekit-cleanup-action) | CI audits & optional apply |
 | **GitHub App** | This repo | PR comments, installs, Marketplace billing |
 
 ## Features

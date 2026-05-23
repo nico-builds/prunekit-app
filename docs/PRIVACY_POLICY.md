@@ -24,7 +24,7 @@ PruneKit analyzes repositories you connect via GitHub. AI processing uses the **
 
 ## Contact
 
-- Issues: https://github.com/chiku524/prunekit-app/issues
+- Issues: https://github.com/nico-builds/prunekit-app/issues
 - Email: *(add before Marketplace submission)*
 
 ## Changes

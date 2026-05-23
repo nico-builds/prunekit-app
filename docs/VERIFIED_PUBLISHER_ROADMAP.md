@@ -21,7 +21,7 @@ GitHub requires a **verified publisher organization** before paid App plans. Thi
 
 **Why:** Distribution, credibility, install funnel toward App.
 
-1. Push `prunekit-cleanup-action` → `github.com/chiku524/prunekit-cleanup-action`
+1. Push `prunekit-cleanup-action` → `github.com/nico-builds/prunekit-cleanup-action`
 2. Accept [Marketplace Developer Agreement](https://docs.github.com/en/site-policy/github-terms/github-marketplace-developer-agreement)
 3. Release **v1.0.0** with **Publish to Marketplace** checked
 4. Categories: Code quality + CI
@@ -41,8 +41,8 @@ Paid apps **must be owned by an organization**, not a personal account.
 2. Organization name: **`PruneKit`** (or `prunekit-dev` if taken)
 3. Contact email: your support address
 4. Transfer repos when ready:
-   - `chiku524/prunekit-cleanup-action` → `PruneKit/prunekit-cleanup-action`
-   - `chiku524/prunekit-app` → `PruneKit/prunekit-app`
+   - `nico-builds/prunekit-cleanup-action` → `PruneKit/prunekit-cleanup-action`
+   - `nico-builds/prunekit-app` → `PruneKit/prunekit-app`
 5. Transfer **GitHub App ownership** to the org after creation
 
 ### Publisher verification (required for paid plans)
