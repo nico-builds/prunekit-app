@@ -1,0 +1,26 @@
+name: PruneKit audit
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: PruneKit codebase cleanup (dry run)
+        uses: chiku524/prunekit-cleanup-action@v1
+        with:
+          cursor-api-key: ${{ secrets.CURSOR_API_KEY }}
+          mode: dry-run
+
+      - name: Upload cleanup reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: prunekit-reports
+          path: .cleanup/

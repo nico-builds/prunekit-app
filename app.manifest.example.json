@@ -1,0 +1,24 @@
+{
+  "name": "PruneKit",
+  "description": "Prune dead code and merge redundant docs in your GitHub repositories.",
+  "url": "https://github.com/chiku524/prunekit-app",
+  "hook_attributes": {
+    "url": "https://YOUR_DEPLOYED_HOST/webhooks/github"
+  },
+  "redirect_url": "https://YOUR_DEPLOYED_HOST/setup/complete",
+  "setup_url": "https://YOUR_DEPLOYED_HOST/setup",
+  "public": true,
+  "default_permissions": {
+    "metadata": "read",
+    "contents": "read",
+    "pull_requests": "write",
+    "actions": "read",
+    "issues": "write"
+  },
+  "default_events": [
+    "pull_request",
+    "installation",
+    "installation_repositories",
+    "marketplace_purchase"
+  ]
+}
